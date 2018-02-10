@@ -1,0 +1,3 @@
+oc_antispam_homepage:
+    path:     /
+    defaults: { _controller: OCAntispamBundle:Default:index }
