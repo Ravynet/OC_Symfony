@@ -1,9 +1,14 @@
 {# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
 
-{% extends "::layout.html.twig" %}
+{% extends "OCCoreBundle::layout.html.twig" %}
 
 {% block title %}
-    Annonces - {{ parent() }}
+    {{ parent() }}
+{% endblock %}
+
+{% block menu %}
+    <h4>Dernières annonces</h4>
+    {{ render(controller("OCPlatformBundle:Advert:menu", {'limit': 3})) }}
 {% endblock %}
 
 {% block body %}
