@@ -1,0 +1,26 @@
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    Liste par catégories - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+
+    {% if repoCategory|length > 0 %}
+        <div>
+            Les 5 dernières candidatures :
+
+            <ul>
+                {{ dump(repoCategory) }}
+                {% for category in repoCategory %}
+                    <li>{{ category.advert.title }}</li>
+                    <li>{{ category.content }}<i> Par {{ category.author }}, le {{ category.date|date('d/m/Y') }}</i></li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+
+{% endblock %}

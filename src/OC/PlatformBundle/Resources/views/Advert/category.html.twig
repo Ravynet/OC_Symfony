@@ -1,0 +1,26 @@
+{# src/OC/PlatformBundle/Resources/view/Advert/view.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    Liste par catégories - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+
+    {% if repoCategory|length > 0 %}
+        <div>
+            Ces annonces font parties des catégories suivantes :
+
+            <ul>
+                {{ dump(repoCategory) }}
+                {% for category in repoCategory %}
+                    <li>{{ category.title }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+
+{% endblock %}
