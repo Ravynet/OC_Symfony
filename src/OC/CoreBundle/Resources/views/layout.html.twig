@@ -60,5 +60,13 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     {% endblock %}
 
+    <script>
+        function activatePlacesSearch(){
+            var input = document.getElementById('search_term');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+        }
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4QkDal6Xsd08cx07VMsovLuKdzLrDlM&libraries=places&callback=activatePlacesSearch"></script>
+
     </body>
 </html>

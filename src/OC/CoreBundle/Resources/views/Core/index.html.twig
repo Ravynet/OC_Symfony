@@ -8,6 +8,12 @@
 
     <h2>Page d'accueil de notre site</h2>
 
+    <input type="text" class="form-control" name="term" id="search_term" placeholder="Search..." value="">
+    
+
+
+
+
     {# On affiche tous les messages flash dont le nom est « info » #}
     {% for message in app.session.flashbag.get('info') %}
         <div class="alert alert-info">Message flash : {{ message }}</div>
